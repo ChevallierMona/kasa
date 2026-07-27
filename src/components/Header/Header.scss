@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  padding-bottom: 0px;
+  background-color: #f6f6f6;
+    @media screen and (max-width: 768px) {
+    // Mobile
+    padding: 20px;
+
+    
+}
+  
+}
+
+.header__logo {
+  height: 50px;
+  float: right;
+
+    @media screen and (max-width: 768px) {
+    // Mobile
+        height: 30px;
+    }
+  
+}
+
+.header__nav {
+  display: flex;
+  list-style: none;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  margin-left: 20px;
+
+      @media screen and (max-width: 768px) {
+    // Mobile
+        margin-left: 10px;
+        font-size: 14px;
+}
+}
