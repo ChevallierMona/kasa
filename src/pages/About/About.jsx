@@ -3,6 +3,7 @@ import Banner from "../../components/Banner/Banner";
 import bannerAboutImg from '../../assets/banner-aPropos.png';
 import arrow_left from '../../assets/arrow_about_content_left.png';
 import "./About.scss";
+import Collapse from "../../components/Collapse/Collapse";
 
 
 function About() {
@@ -10,10 +11,21 @@ function About() {
       <div className="about">
       <Banner image={bannerAboutImg}  />
       <div className="about__content">
-        <p>Fiabilite</p>
-        <p>Respect</p>
-        <p>Service</p>
-        <p>securite</p>
+<Collapse
+          title="Fiabilité"
+        />
+
+        <Collapse
+          title="Respect"
+        />
+
+        <Collapse
+          title="Service"
+        />
+
+        <Collapse
+          title="Sécurité"
+        />
       </div>
       </div>
 );

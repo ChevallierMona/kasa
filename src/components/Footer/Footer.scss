@@ -4,4 +4,13 @@ footer {
     padding: 20px;
     text-align: center;
     width: 100%;
+    bottom: 0;
+    position: fixed;
+    height: 100px;
+    @media screen and (max-width: 768px) {
+    // Mobile
+    padding: 10px;
+    gap: 10px;
+    height: 80px;
+    }    
 }
