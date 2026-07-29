@@ -1,0 +1,32 @@
+.error{
+    padding: 20px;
+    text-align: center;
+
+}
+.error img {
+    width: 80%;
+    height: auto;
+    margin-top: 30%;
+    margin-bottom: 100px;
+
+
+
+
+}
+.error p {
+    color: #FF6060;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+        @media screen and (max-width: 768px) {
+        font-size: 10px;   
+    }
+}
+
+.error__link {
+    font-size: 15px;
+    text-decoration: underline;
+        @media screen and (max-width: 768px) {
+     font-size: 10px;   
+    }
+}

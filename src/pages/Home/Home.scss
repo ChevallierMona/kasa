@@ -1,23 +1,14 @@
-body{ 
+.home {
   max-width: 1440px;
-  gap: 50px;
-  top:45px;
+  margin: 0 auto;
   background-color: #f6f6f6;
+  padding: 20px;
+  padding-top: 0;
 
   @media screen and (max-width: 768px) {
-    // Mobile
     max-width: 100%;
-  }
-}
-.home {
-  background-color: #f6f6f6;
-  margin: 20px ;
-  padding: 20px;
-  padding-top: 0px;
-  @media screen and (max-width: 768px) {
-    // Mobile
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -28,10 +19,11 @@ body{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  background-color: rgba(166, 165, 165, 0.41);
+  background-color:  #f6f6f6;
 
   @media screen and (max-width: 768px) {
-    // Mobile
     grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
   }
 }
