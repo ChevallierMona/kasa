@@ -1,13 +1,15 @@
-import logements from "../../data/logements.json";
+import { Link } from "react-router-dom";
 import "./Card.scss";
 
 
-function Card({title, cover}) {
+function Card({id,title, cover}) {
     return (
-        <div className="card">
-            <img src={cover} alt={title} />
-            <h3>{title}</h3>
-        </div>
+        <Link to={`/housing/${id}`}>
+            <div className="card">
+                <img src={cover} alt={title} />
+                <h3>{title}</h3>
+            </div>
+        </Link>
     );
 }
 export default Card;
