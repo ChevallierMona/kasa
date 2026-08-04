@@ -23,8 +23,7 @@ function Housing() {
 
   return (
     <>
-      <Slideshow pictures={logement.pictures} />
-    </>
+<Slideshow pictures={logement.pictures} />    </>
   );
 }
 
