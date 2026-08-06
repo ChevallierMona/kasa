@@ -1,6 +1,9 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import logements from "../../data/logements.json";
+import Tags from "../../components/Tags/Tags";
+import Rating from "../../components/Rating/Rating";
+import Collapse from "../../components/Collapse/Collapse";
 
 import Slideshow from "../../components/Slideshow/Slideshow";
 
@@ -41,16 +44,7 @@ function Housing() {
             {logement.location}
           </p>
 
-          <div className="housing__tags">
-            {logement.tags.map((tag, index) => (
-              <span
-                key={index}
-                className="housing__tag"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+          <Tags tags={logement.tags} />
 
         </div>
 
@@ -69,23 +63,7 @@ function Housing() {
             />
 
           </div>
-
-          <div className="housing__rating">
-
-            {Array.from({ length: 5 }, (_, index) => (
-              <span
-                key={index}
-                className={`housing__star ${
-                  index < logement.rating
-                    ? "housing__star--active"
-                    : "housing__star--inactive"
-                }`}
-              >
-                ★
-              </span>
-            ))}
-
-          </div>
+          <Rating rating={logement.rating} />
 
         </div>
 
@@ -93,6 +71,20 @@ function Housing() {
 
       <div className="housing__collapse">
 
+        <Collapse
+          title="Description"
+          content={<p>{logement.description}</p>}
+        />
+        <Collapse
+          title="Équipements"
+          content={
+            <ul>
+              {logement.equipments.map((equipment) => (
+                <li key={equipment}>{equipment}</li>
+              ))}
+            </ul>
+          }
+        />
 
       </div>
 
